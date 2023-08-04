@@ -43,9 +43,11 @@ namespace Entities.Entities
         private void BeforeSaveChanges()
         {
             var now = DateTime.Now;
+
+            //TODO: giriş yapan kullanıcı olunca açılacak.
             //var userId = _httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier)?.Value?.Trim();
             var userId = 1;
-            //TODO: 1 => System id 
+            
             var currentUser = userId != null ? Convert.ToInt32(userId) : 1;
 
             foreach (var entry in ChangeTracker.Entries<AuditableBaseEntity>().Where(e => e.State == EntityState.Added || e.State == EntityState.Deleted || e.State == EntityState.Modified).ToArray())

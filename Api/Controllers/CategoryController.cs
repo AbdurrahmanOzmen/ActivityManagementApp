@@ -24,6 +24,14 @@ namespace Api.Controllers
             return Ok(result);
         }
 
+        [HttpGet("GetCategoryDetail")]
+        public async Task<IActionResult> GetCategoryDetail(int id)
+        {
+            var result = await _categoryService.GetById(id);
+
+            return Ok(result);
+        }
+
         [HttpPost("CreateCategory")]
         public async Task<IActionResult> CreateCategory([FromBody] CategoryCreateDto request)
         {
@@ -31,8 +39,5 @@ namespace Api.Controllers
 
             return Ok();
         }
-
-        //Yapılacaklar
-        // GetCategoryDetail(int id); ilgili kategorinin detayını dönecek.
     }
 }

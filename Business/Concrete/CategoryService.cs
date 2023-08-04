@@ -26,6 +26,19 @@ namespace Business.Concrete
             await _categoryDal.Add(newCategory);
         }
 
+        public async Task<CategoryDto> GetById(int id)
+        {
+            var category = await _categoryDal.GetById(id);
+
+            CategoryDto result = new CategoryDto
+            {
+                Id = category.Id,
+                CategoryName = category.Name
+            };
+
+            return result;
+        }
+
         public async Task<List<CategoryDto>> GetList()
         {
             var categories = await _categoryDal.GetList();

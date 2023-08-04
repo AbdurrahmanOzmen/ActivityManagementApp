@@ -18,6 +18,14 @@ namespace DataAccess.Concrete
             }
         }
 
+        public async Task<Category> GetById(int id)
+        {
+            using (var context = new ActivityManagementDbContext())
+            {
+                return await context.Categories.SingleOrDefaultAsync(c => c.Id == id);
+            }
+        }
+
         public async Task<List<Category>> GetList()
         {
             using (var context = new ActivityManagementDbContext())

@@ -30,13 +30,14 @@ namespace Api
 
             services.AddScoped<ICategoryService, CategoryService>();
 
-<<<<<<< HEAD
             services.AddScoped<IActivityDal, ActivityDal>();
 
             services.AddScoped<IActivityService, ActivityService>();
 
-=======
->>>>>>> f630658e4533d676c57bf0b209445aa554bf53d1
+            services.AddScoped<IUserDal, UserDal>();
+
+            services.AddScoped<IUserService, UserService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api", Version = "v1" });

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj": {}
+    "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj": {
+    "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\FGDEVHOUSE\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Abdurahman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\FGDEVHOUSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Abdurahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,8 +71,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -77,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
         }
       }
     }

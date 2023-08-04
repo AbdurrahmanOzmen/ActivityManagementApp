@@ -31,5 +31,8 @@ namespace Api.Controllers
 
             return Ok();
         }
+
+        //Yapılacaklar
+        // GetCategoryDetail(int id); ilgili kategorinin detayını dönecek.
     }
 }

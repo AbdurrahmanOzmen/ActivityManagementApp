@@ -12,5 +12,8 @@ namespace DataAccess.Abstract
         Task<List<Activity>> GetList();
         Task<Activity> GetById(int id);
         Task Add(Activity activity);
+        Task Update(Activity activity);
+
+
     }
 }

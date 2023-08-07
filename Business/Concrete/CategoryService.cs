@@ -26,6 +26,16 @@ namespace Business.Concrete
             await _categoryDal.Add(newCategory);
         }
 
+        public async Task Update(CategoryUpdateDto category)
+        {
+            var newCategory = new Category();
+
+            newCategory.Name = category.Name;
+            newCategory.Id = category.Id;
+
+            await _categoryDal.Update(newCategory);
+        }
+
         public async Task<CategoryDto> GetById(int id)
         {
             var category = await _categoryDal.GetById(id);

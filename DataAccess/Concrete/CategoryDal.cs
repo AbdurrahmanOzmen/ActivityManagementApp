@@ -18,6 +18,19 @@ namespace DataAccess.Concrete
             }
         }
 
+        public async Task Update(Category category)
+        {
+            using (var context = new ActivityManagementDbContext())
+            {
+                
+                var entity = await context.Categories.SingleOrDefaultAsync(c => c.Id == category.Id);
+
+                entity.Name = category.Name;
+
+                await context.SaveChangesAsync();
+            }
+        }
+
         public async Task<Category> GetById(int id)
         {
             using (var context = new ActivityManagementDbContext())

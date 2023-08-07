@@ -39,5 +39,13 @@ namespace Api.Controllers
 
             return Ok();
         }
+
+        [HttpPut("UpdateCategory")]
+        public async Task<IActionResult> UpdateCategory([FromBody] CategoryUpdateDto request)
+        {
+            await _categoryService.Update(request);
+
+            return Ok();
+        }
     }
 }

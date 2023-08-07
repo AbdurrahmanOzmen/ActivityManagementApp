@@ -28,6 +28,16 @@ namespace Business.Concrete
             await _activityDal.Add(newActivity);
         }
 
+        public async Task Update(ActivityUpdateDto activity)
+        {
+            var newActivity = new Activity();
+
+            newActivity.Title = activity.Title;
+            newActivity.Id = activity.Id;
+
+            await _activityDal.Update(newActivity);
+        }
+
         public async Task<ActivityDto> GetById(int id)
         {
             var activity = await _activityDal.GetById(id);

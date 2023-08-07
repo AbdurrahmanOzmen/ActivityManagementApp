@@ -42,5 +42,13 @@ namespace Api.Controllers
 
             return Ok();
         }
+
+        [HttpPut("UpdateUser")]
+        public async Task<IActionResult> UpdateUser([FromBody] UserUpdateDto request)
+        {
+            await _userService.Update(request);
+
+            return Ok();
+        }
     }
 }

@@ -28,6 +28,16 @@ namespace Business.Concrete
             await _userDal.Add(newUser);
         }
 
+        public async Task Update(UserUpdateDto user)
+        {
+            var newUser = new User();
+
+            newUser.Name = user.Name;
+            newUser.Id = user.Id;
+
+            await _userDal.Update(newUser);
+        }
+
         public async Task<UserDto> GetById(int id)
         {
             var user = await _userDal.GetById(id);

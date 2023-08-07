@@ -20,6 +20,18 @@ namespace DataAccess.Concrete
                 await context.SaveChangesAsync();
             }
         }
+        public async Task Update(User user)
+        {
+            using (var context = new ActivityManagementDbContext())
+            {
+
+                var entity = await context.Users.SingleOrDefaultAsync(c => c.Id == user.Id);
+
+                entity.Name = user.Name;
+
+                await context.SaveChangesAsync();
+            }
+        }
 
         public async Task<User> GetById(int id)
         {
@@ -36,5 +48,7 @@ namespace DataAccess.Concrete
                 return await context.Users.ToListAsync();
             }
         }
+
+
     }
 }

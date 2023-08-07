@@ -42,5 +42,14 @@ namespace Api.Controllers
 
             return Ok();
         }
+
+
+        [HttpPut("UpdateActivity")]
+        public async Task<IActionResult> UpdateActivity([FromBody] ActivityUpdateDto request)
+        {
+            await _activityService.Update(request);
+
+            return Ok();
+        }
     }
 }

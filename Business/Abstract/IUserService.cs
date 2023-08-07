@@ -12,5 +12,6 @@ namespace Business.Abstract
         Task<List<UserDto>> GetList();
         Task<UserDto> GetById(int id);
         Task Create(UserCreateDto user);
+        Task Update(UserUpdateDto user);
     }
 }

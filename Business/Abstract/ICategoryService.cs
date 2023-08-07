@@ -9,5 +9,6 @@ namespace Business.Abstract
         Task<List<CategoryDto>> GetList();
         Task<CategoryDto> GetById(int id);
         Task Create(CategoryCreateDto category);
+        Task Update(CategoryUpdateDto category);
     }
 }

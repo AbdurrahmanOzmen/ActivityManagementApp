@@ -12,5 +12,6 @@ namespace DataAccess.Abstract
         Task<List<User>> GetList();
         Task<User> GetById(int id);
         Task Add(User user);
+        Task Update(User user);
     }
 }

@@ -38,6 +38,11 @@ namespace Business.Concrete
             await _userDal.Update(newUser);
         }
 
+        public async Task Delete(int id)
+        {
+
+            await _userDal.Delete(id);
+        }
         public async Task<UserDto> GetById(int id)
         {
             var user = await _userDal.GetById(id);

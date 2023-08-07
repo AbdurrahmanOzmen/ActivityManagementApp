@@ -13,5 +13,6 @@ namespace Business.Abstract
         Task<ActivityDto> GetById(int id);
         Task Create(ActivityCreateDto activity);
         Task Update(ActivityUpdateDto activity);
+        Task Delete(int id);
     }
 }

@@ -35,6 +35,11 @@ namespace Business.Concrete
 
             await _categoryDal.Update(newCategory);
         }
+        public async Task Delete(int id)
+        {
+                        
+            await _categoryDal.Delete(id);
+        }
 
         public async Task<CategoryDto> GetById(int id)
         {
@@ -61,5 +66,6 @@ namespace Business.Concrete
 
             return result;
         }
+        
     }
 }

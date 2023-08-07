@@ -13,7 +13,7 @@ namespace DataAccess.Abstract
         Task<Activity> GetById(int id);
         Task Add(Activity activity);
         Task Update(Activity activity);
-
+        Task Delete(int id);
 
     }
 }

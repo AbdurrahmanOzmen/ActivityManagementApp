@@ -51,5 +51,13 @@ namespace Api.Controllers
 
             return Ok();
         }
+
+        [HttpDelete("DeleteActivity")]
+        public async Task<IActionResult> DeleteActivity(int id)
+        {
+            await _activityService.Delete(id);
+
+            return Ok();
+        }
     }
 }

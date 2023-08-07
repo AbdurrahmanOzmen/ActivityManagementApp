@@ -31,7 +31,17 @@ namespace DataAccess.Concrete
                 await context.SaveChangesAsync();
             }
         }
+        public async Task Delete(int id)
+        {
+            using (var context = new ActivityManagementDbContext())
+            {
 
+                var entity = await context.Activities.SingleOrDefaultAsync(c => c.Id == id);
+                entity.IsDeleted = true;
+
+                await context.SaveChangesAsync();
+            }
+        }
         public async Task<Activity> GetById(int id)
         {
             using (var context = new ActivityManagementDbContext())
@@ -44,7 +54,7 @@ namespace DataAccess.Concrete
         {
             using (var context = new ActivityManagementDbContext())
             {
-                return await context.Activities.ToListAsync();
+                return await context.Activities.Where(x => !x.IsDeleted).ToListAsync();
             }
         }
 

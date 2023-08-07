@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-     public class ActivityService : IActivityService
+    public class ActivityService : IActivityService
     {
         private IActivityDal _activityDal;
 
@@ -38,6 +38,11 @@ namespace Business.Concrete
             await _activityDal.Update(newActivity);
         }
 
+        public async Task Delete(int id)
+        {
+            await _activityDal.Delete(id);
+        }
+
         public async Task<ActivityDto> GetById(int id)
         {
             var activity = await _activityDal.GetById(id);
@@ -48,7 +53,7 @@ namespace Business.Concrete
                 ActivityTitle = activity.Title
             };
 
-            return result;            
+            return result;
         }
 
         public async Task<List<ActivityDto>> GetList()

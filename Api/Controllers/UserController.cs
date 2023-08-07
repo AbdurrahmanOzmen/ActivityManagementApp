@@ -50,5 +50,13 @@ namespace Api.Controllers
 
             return Ok();
         }
+
+        [HttpDelete("DeleteUser")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            await _userService.Delete(id);
+
+            return Ok();
+        }
     }
 }

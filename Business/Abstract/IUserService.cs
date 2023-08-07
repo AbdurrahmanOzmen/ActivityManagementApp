@@ -13,5 +13,6 @@ namespace Business.Abstract
         Task<UserDto> GetById(int id);
         Task Create(UserCreateDto user);
         Task Update(UserUpdateDto user);
+        Task Delete(int id);
     }
 }

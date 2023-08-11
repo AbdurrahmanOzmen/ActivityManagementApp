@@ -23,6 +23,10 @@ namespace Business.Concrete
         {
             var newActivity = new Activity();
 
+            newActivity.CategoryId = activity.CategoryId;
+            newActivity.ActivityDate = activity.ActivityDate;
+            newActivity.Description = activity.Description;
+            newActivity.Address = activity.Address;
             newActivity.Title = activity.Title;
 
             await _activityDal.Add(newActivity);

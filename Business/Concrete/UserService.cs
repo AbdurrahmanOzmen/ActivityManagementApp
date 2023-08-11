@@ -23,7 +23,11 @@ namespace Business.Concrete
         {
             var newUser = new User();
 
+            newUser.UserType = user.UserType;
             newUser.Name = user.Name;
+            newUser.Surname = user.Surname;
+            newUser.Email = user.Email;
+            newUser.Password = user.Password;
 
             await _userDal.Add(newUser);
         }
@@ -32,8 +36,8 @@ namespace Business.Concrete
         {
             var newUser = new User();
 
-            newUser.Name = user.Name;
             newUser.Id = user.Id;
+            newUser.Name = user.Name;
 
             await _userDal.Update(newUser);
         }
@@ -50,7 +54,11 @@ namespace Business.Concrete
             UserDto result = new UserDto
             {
                 Id = user.Id,
-                Name = user.Name
+                Name = user.Name,
+                UserType = user.UserType,
+                Surname = user.Surname,
+                Email = user.Email,
+                Password = user.Password
             };
 
             return result;
@@ -63,10 +71,32 @@ namespace Business.Concrete
             var result = users.Select(a => new UserDto()
             {
                 Id = a.Id,
-                Name = a.Name
+                Name = a.Name,
+                UserType = a.UserType,
+                Surname = a.Surname,
+                Email = a.Email,
+                Password = a.Password
             }).ToList();
 
             return result;
         }
+
+        public async Task<UserDto> Login(string email, string password)
+        {
+            var user = await _userDal.Login(email,password);
+
+            UserDto result = new UserDto
+            {
+                Id = user.Id,
+                Name = user.Name,
+                UserType = user.UserType,
+                Surname = user.Surname,
+                Email = user.Email,
+                Password = user.Password
+            };
+
+            return result;
+        }
+
     }
 }

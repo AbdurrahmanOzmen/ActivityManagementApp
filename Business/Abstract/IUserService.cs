@@ -14,5 +14,7 @@ namespace Business.Abstract
         Task Create(UserCreateDto user);
         Task Update(UserUpdateDto user);
         Task Delete(int id);
+        Task<UserDto> Login(string email, string password);
+        
     }
 }

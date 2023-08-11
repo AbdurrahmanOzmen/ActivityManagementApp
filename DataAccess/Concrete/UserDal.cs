@@ -59,6 +59,13 @@ namespace DataAccess.Concrete
             }
         }
 
+        public async Task<User> Login(string email, string password)
+        {
+            using (var context = new ActivityManagementDbContext())
+            {
+                return await context.Users.SingleOrDefaultAsync(c => c.Email == email &&  c.Password == password);
+            }
+        }
 
     }
 }

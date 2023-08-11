@@ -63,7 +63,7 @@ namespace DataAccess.Concrete
         {
             using (var context = new ActivityManagementDbContext())
             {
-                return await context.Users.SingleOrDefaultAsync(c => c.Email == email &&  c.Password == password);
+                return await context.Users.SingleOrDefaultAsync(c => c.Email == email &&  c.Password == password && !c.IsDeleted);
             }
         }
 

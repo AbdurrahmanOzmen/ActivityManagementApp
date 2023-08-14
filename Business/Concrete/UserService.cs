@@ -38,6 +38,10 @@ namespace Business.Concrete
 
             newUser.Id = user.Id;
             newUser.Name = user.Name;
+            newUser.UserType = user.UserType;
+            newUser.Surname = user.Surname;
+            newUser.Email = user.Email;
+            newUser.Password = user.Password;
 
             await _userDal.Update(newUser);
         }

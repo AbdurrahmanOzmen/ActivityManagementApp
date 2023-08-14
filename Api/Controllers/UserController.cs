@@ -1,6 +1,7 @@
 ﻿using Api.Infrastructure.Helpers;
 using Business.Abstract;
 using Business.Dto.User;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class UserController : Controller
     {
         private IUserService _userService;
@@ -60,6 +62,8 @@ namespace Api.Controllers
             return Ok();
         }
 
+        //TODO: HttpPost olacak. email ve password modelden alınacak.
+        [AllowAnonymous]
         [HttpGet("GetLogin")]
         public async Task<IActionResult> Login(string email, string password)
         {

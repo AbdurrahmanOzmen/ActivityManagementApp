@@ -1,4 +1,5 @@
-﻿using Business.Abstract;
+﻿using Api.Infrastructure.Helpers;
+using Business.Abstract;
 using Business.Dto.User;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -64,9 +65,19 @@ namespace Api.Controllers
         {
             var result = await _userService.Login(email, password);
 
-            return Ok(result);
+            var claims = new Dictionary<string, object>()
+            {
+                { "unique_name", result.Email},
+                { "user", result}
+            };
+
+            var tokenResult = new UserTokenDto
+            {
+                User = result,
+                Token = JwtBuilderHelper.Build(claims)
+            };
+
+            return Ok(tokenResult);
         }
-
-
     }
 }

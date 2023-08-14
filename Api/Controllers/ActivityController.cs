@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.Dto.Activity;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ namespace Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ActivityController : Controller
     {
         private IActivityService _activityService;

@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.Dto.Category;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -7,6 +8,7 @@ namespace Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class CategoryController : Controller
     {
         private ICategoryService _categoryService;

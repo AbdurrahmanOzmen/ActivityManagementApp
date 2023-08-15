@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Api\\Api.csproj": {}
+    "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Api\\Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Api\\Api.csproj": {
+    "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Api\\Api.csproj",
-        "packagesPath": "C:\\Users\\Abdurahman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Api\\obj\\",
+        "projectPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Api\\Api.csproj",
+        "packagesPath": "C:\\Users\\FGDEVHOUSE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Api\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Abdurahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\FGDEVHOUSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Business\\Business.csproj": {
-                "projectPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Business\\Business.csproj"
+              "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Business\\Business.csproj": {
+                "projectPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Business\\Business.csproj"
               }
             }
           }
@@ -75,7 +72,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -87,25 +85,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Business\\Business.csproj": {
+    "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\Abdurahman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Business\\obj\\",
+        "projectPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\FGDEVHOUSE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Business\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Abdurahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\FGDEVHOUSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -119,11 +113,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj"
+              "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -143,7 +137,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -152,25 +147,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Abdurahman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\FGDEVHOUSE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Abdurahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\FGDEVHOUSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -184,8 +175,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj"
+              "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj"
               }
             }
           }
@@ -205,7 +196,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -214,25 +206,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj": {
+    "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Abdurahman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abdurahman\\Desktop\\staj\\ActivityManagementApp\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\FGDEVHOUSE\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FGDEVHOUSE\\source\\repos\\FGDevHouse\\ActivityManagementApp\\Entities\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Abdurahman\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\FGDEVHOUSE\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -285,7 +273,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -294,7 +283,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

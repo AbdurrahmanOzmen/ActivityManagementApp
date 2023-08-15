@@ -1,11 +1,11 @@
 ﻿using Api.Infrastructure.Helpers;
 using Business.Abstract;
 using Business.Dto.User;
+using Entities.Enums;
+using ESPV2.OperationManagement.Api.Infrastructure.Attributes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Api.Controllers
@@ -23,6 +23,7 @@ namespace Api.Controllers
         }
 
         [HttpGet("GetUserList")]
+        [HasUserType(UserTypeEnum.Admin)]
         public async Task<IActionResult> GetUserList()
         {
             var result = await _userService.GetList();

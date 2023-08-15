@@ -40,6 +40,8 @@ namespace Api
 
             services.AddScoped<IUserService, UserService>();
 
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api", Version = "v1" });

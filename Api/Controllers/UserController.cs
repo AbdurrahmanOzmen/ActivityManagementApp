@@ -66,9 +66,9 @@ namespace Api.Controllers
         //TODO: diğer controller lar da [Authorize] attribute eklenecek.
         [AllowAnonymous]
         [HttpPost("Login")]
-        public async Task<IActionResult> Login([FromBody] string email, string password)
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
-            var result = await _userService.Login(email, password);
+            var result = await _userService.Login(loginDto);
 
             var claims = new Dictionary<string, object>()
             {

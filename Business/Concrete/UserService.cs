@@ -85,9 +85,9 @@ namespace Business.Concrete
             return result;
         }
 
-        public async Task<UserDto> Login(string email, string password)
+        public async Task<UserDto> Login(LoginDto loginDto)
         {
-            var user = await _userDal.Login(email,password);
+            var user = await _userDal.Login(loginDto.Email, loginDto.Password);
 
             UserDto result = new UserDto
             {

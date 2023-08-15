@@ -68,10 +68,10 @@ namespace Api.Controllers
         //TODO: HttpGet yerine HttpPost olacak. email ve password modelden alınacak. LoginDto oluşturulacak. İçinde email, password olacak. UpdateUser'daki parametre gibi FromBody üzerinden alınacak.
         //TODO: diğer controller lar da [Authorize] attribute eklenecek.
         [AllowAnonymous]
-        [HttpGet("Login")]
-        public async Task<IActionResult> Login(string email, string password)
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
         {
-            var result = await _userService.Login(email, password);
+            var result = await _userService.Login(loginDto);
 
             var claims = new Dictionary<string, object>()
             {

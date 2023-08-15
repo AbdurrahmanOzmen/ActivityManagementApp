@@ -1,4 +1,5 @@
 using Api.Infrastructure.ServiceCollectionExtensions;
+using Api.Mapping.AutoMapperProfile;
 using Business.Abstract;
 using Business.Concrete;
 using DataAccess.Abstract;
@@ -40,7 +41,7 @@ namespace Api
 
             services.AddScoped<IUserService, UserService>();
 
-            services.AddAutoMapper(typeof(Startup));
+            services.AddAutoMapper(typeof(MapProfile));
 
             services.AddSwaggerGen(c =>
             {

@@ -1,4 +1,5 @@
-﻿using Business.Abstract;
+﻿using AutoMapper;
+using Business.Abstract;
 using Business.Dto.User;
 using DataAccess.Abstract;
 using Entities.Entities;
@@ -13,10 +14,12 @@ namespace Business.Concrete
     public class UserService : IUserService
     {
         private IUserDal _userDal;
+        private IMapper _mapper;
 
-        public UserService(IUserDal userDal)
+        public UserService(IUserDal userDal, IMapper mapper)
         {
             _userDal = userDal;
+            _mapper = mapper;
         }
 
         public async Task Create(UserCreateDto user)
@@ -55,15 +58,17 @@ namespace Business.Concrete
         {
             var user = await _userDal.GetById(id);
 
-            UserDto result = new UserDto
-            {
-                Id = user.Id,
-                Name = user.Name,
-                UserType = user.UserType,
-                Surname = user.Surname,
-                Email = user.Email,
-                Password = user.Password
-            };
+            var result = _mapper.Map<UserDto>(user);
+
+            //UserDto result = new UserDto
+            //{
+            //    Id = user.Id,
+            //    Name = user.Name,
+            //    UserType = user.UserType,
+            //    Surname = user.Surname,
+            //    Email = user.Email,
+            //    Password = user.Password
+            //};
 
             return result;
         }
@@ -72,15 +77,17 @@ namespace Business.Concrete
         {
             var users = await _userDal.GetList();
 
-            var result = users.Select(a => new UserDto()
-            {
-                Id = a.Id,
-                Name = a.Name,
-                UserType = a.UserType,
-                Surname = a.Surname,
-                Email = a.Email,
-                Password = a.Password
-            }).ToList();
+            var result = _mapper.Map<List<UserDto>>(users);
+
+            //var result = users.Select(a => new UserDto()
+            //{
+            //    Id = a.Id,
+            //    Name = a.Name,
+            //    UserType = a.UserType,
+            //    Surname = a.Surname,
+            //    Email = a.Email,
+            //    Password = a.Password
+            //}).ToList();
 
             return result;
         }

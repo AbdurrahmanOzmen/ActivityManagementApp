@@ -7,7 +7,7 @@ using System;
 using System.Linq;
 using System.Text.Json;
 
-namespace ESPV2.OperationManagement.Api.Infrastructure.Attributes
+namespace Api.Infrastructure.Attributes
 {
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = false)]
     public class HasUserTypeAttribute : ActionFilterAttribute

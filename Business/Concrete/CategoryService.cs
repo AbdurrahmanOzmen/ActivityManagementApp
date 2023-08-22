@@ -1,4 +1,5 @@
-﻿using Business.Abstract;
+﻿using AutoMapper;
+using Business.Abstract;
 using Business.Dto.Category;
 using DataAccess.Abstract;
 using Entities.Entities;
@@ -11,10 +12,12 @@ namespace Business.Concrete
     public class CategoryService : ICategoryService
     {
         private ICategoryDal _categoryDal;
+        private IMapper _mapper;
 
-        public CategoryService(ICategoryDal categoryDal)
+        public CategoryService(ICategoryDal categoryDal, IMapper mapper)
         {
             _categoryDal = categoryDal;
+            _mapper = mapper;
         }
 
         public async Task Create(CategoryCreateDto category)
@@ -45,11 +48,13 @@ namespace Business.Concrete
         {
             var category = await _categoryDal.GetById(id);
 
-            CategoryDto result = new CategoryDto
-            {
-                Id = category.Id,
-                CategoryName = category.Name
-            };
+            var result = _mapper.Map<CategoryDto>(category);
+
+            //CategoryDto result = new CategoryDto
+            //{
+            //    Id = category.Id,
+            //    CategoryName = category.Name
+            //};
 
             return result;
         }
@@ -58,11 +63,13 @@ namespace Business.Concrete
         {
             var categories = await _categoryDal.GetList();
 
-            var result = categories.Select(a => new CategoryDto()
-            {
-                Id = a.Id,
-                CategoryName = a.Name
-            }).ToList();
+            var result = _mapper.Map<List<CategoryDto>>(categories);
+
+            //var result = categories.Select(a => new CategoryDto()
+            //{
+            //    Id = a.Id,
+            //    CategoryName = a.Name
+            //}).ToList();
 
             return result;
         }

@@ -28,7 +28,7 @@ namespace Api.Mapping.AutoMapperProfile
             //CreateMap<Category, CategoryUpdateDto>();
 
             //CreateMap<CategoryDto, Category>();
-            //CreateMap<Category, CategoryDto>();
+            CreateMap<Category, CategoryDto>();
             ////--//
 
             //CreateMap<ActivityCreateDto, Activity>();
@@ -38,7 +38,7 @@ namespace Api.Mapping.AutoMapperProfile
             //CreateMap<Activity, ActivityUpdateDto>();
 
             //CreateMap<ActivityDto, Activity>();
-            //CreateMap<Activity, ActivityDto>();
+            CreateMap<Activity, ActivityDto>();
         }
     }
 }

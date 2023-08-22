@@ -1,4 +1,5 @@
-﻿using Business.Abstract;
+﻿using AutoMapper;
+using Business.Abstract;
 using Business.Dto.Activity;
 using DataAccess.Abstract;
 using Entities.Entities;
@@ -13,10 +14,12 @@ namespace Business.Concrete
     public class ActivityService : IActivityService
     {
         private IActivityDal _activityDal;
+        private IMapper _mapper;
 
-        public ActivityService(IActivityDal activityDal)
+        public ActivityService(IActivityDal activityDal, IMapper mapper)
         {
             _activityDal = activityDal;
+            _mapper = mapper;
         }
 
         public async Task Create(ActivityCreateDto activity)
@@ -55,15 +58,17 @@ namespace Business.Concrete
         {
             var activity = await _activityDal.GetById(id);
 
-            ActivityDto result = new ActivityDto
-            {
-                Id = activity.Id,
-                ActivityTitle = activity.Title,
-                CategoryId = activity.CategoryId,
-                Address = activity.Address,
-                Description = activity.Description,
-                ActivityDate = activity.ActivityDate
-            };
+            var result = _mapper.Map<ActivityDto>(activity);
+
+            //ActivityDto result = new ActivityDto
+            //{
+            //    Id = activity.Id,
+            //    ActivityTitle = activity.Title,
+            //    CategoryId = activity.CategoryId,
+            //    Address = activity.Address,
+            //    Description = activity.Description,
+            //    ActivityDate = activity.ActivityDate
+            //};
 
             return result;
         }
@@ -72,16 +77,18 @@ namespace Business.Concrete
         {
             var activities = await _activityDal.GetList();
 
-            var result = activities.Select(a => new ActivityDto()
-            {
-                Id = a.Id,
-                ActivityTitle = a.Title,
-                CategoryId = a.CategoryId,
-                Address = a.Address,
-                Description = a.Description,
-                ActivityDate = a.ActivityDate
+            var result = _mapper.Map<List<ActivityDto>>(activities);
 
-            }).ToList();
+            //var result = activities.Select(a => new ActivityDto()
+            //{
+            //    Id = a.Id,
+            //    ActivityTitle = a.Title,
+            //    CategoryId = a.CategoryId,
+            //    Address = a.Address,
+            //    Description = a.Description,
+            //    ActivityDate = a.ActivityDate
+
+            //}).ToList();
 
             return result;
         }

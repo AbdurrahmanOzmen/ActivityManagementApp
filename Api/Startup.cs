@@ -29,6 +29,18 @@ namespace Api
 
             services.AddControllers();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder =>
+                    {
+                        builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                    });
+            });
+
             services.AddScoped<ICategoryDal, CategoryDal>();
 
             services.AddScoped<ICategoryService, CategoryService>();
@@ -87,6 +99,7 @@ namespace Api
             }
 
             app.UseHttpsRedirection();
+            app.UseCors("CorsPolicy");
 
             app.UseAuthentication();
 

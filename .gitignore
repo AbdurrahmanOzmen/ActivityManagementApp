@@ -350,3 +350,5 @@ MigrationBackup/
 .ionide/
 .DS_Store
 *.v2
+*.cache
+*.editorconfig
